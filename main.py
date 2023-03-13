@@ -1,10 +1,12 @@
 import streamlit as st
 from PIL import Image
+import subprocess
 
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 #####################
+
 # Header
 st.write('''
 # Mohamed Loutt Horma Babana
@@ -14,11 +16,15 @@ st.write('''
 image = Image.open('profil.png')
 st.image(image, width=200)
 
+# Create a button to open the PDF file
+if st.button('📄View Resume'):
+    subprocess.call(["open", "CV.pdf"])
+
 st.markdown('## Summary', unsafe_allow_html=True)
 st.info('''
 - I am a master student in data science and engineering, passionate about data science, artificial intelligence and machine learning.
 - knowledge of business management and an entrepreneurial spirit.
-- Ability to communicate, listen, write and comprehend and teamwork''')
+- Ability to communicate, listen - write - comprehend and teamwork''')
 
 #####################
 # Navigation
@@ -99,7 +105,6 @@ st.markdown('''
 
 txt('- **Baccalauréate** (Mathematic), *El Khiyar School*, Mauritania',
     '2017-2018')
-
 txt('- **License MIAGE** (IT Methods Applied to Business Managment), *Faculty of Science and Technology , University of Nouakchott*, Mauritania',
     '2021-2022')
 txt('- **Master\'s in Data Science and Engineering** , *Universié Mohamed V *,Faculty of Sciences of Rabat, Morrocco',
@@ -139,18 +144,18 @@ st.markdown('''
 st.markdown('''
 ## Skills
 ''')
-txt3('👨‍💻Programming', '`Python`, `Java`, `R`')
+txt3('👨‍💻 Programming', '`Python`, `Java`, `R`')
 txt3('📚Data processing/wrangling', '`pandas`, `numpy`, `SQL`')
-txt3('📊Data visualization', '`matplotlib`, `seaborn`, `plotly`, `ggplot2`')
+txt3('📊 Data visualization', '`matplotlib`, `seaborn`, `plotly`, `ggplot2`')
 txt3('🤖 Machine Learning', '`scikit-learn`')
-txt3('🧠Deep Learning', '`TensorFlow`')
-txt3('🌐Web development', '`Django`, `Streamlit`, `JS`, `Vue.js`, `HTML`, `CSS`')
+txt3('🧠 Deep Learning', '`TensorFlow`')
+txt3('🌐 Web development', '`Django`, `Streamlit`, `Vue.js`, `HTML`, `CSS`')
 txt3('🗄️️ Databases', '`MySQL`, `SQL Server`, `Oracle`')
-txt3('🚀Model deployment', '`streamlit`, `R Shiny`, `Heroku`, `AWS`')
+txt3('🚀 Model deployment', '`streamlit`, `R Shiny`, `Heroku`, `AWS`')
 
 #####################
 st.markdown('''
 ## Contact
 ''')
 txt2('LinkedIn', 'https://www.linkedin.com/in/mohamed-loutt-horma-babana-5619011aa')
-txt2('Email', 'https://twitter.com/thedataprof')
+txt2('Email', 'm.loutt99@gmail.com')
