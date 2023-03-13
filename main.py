@@ -11,7 +11,7 @@ st.write('''
 ##### *Resume* 
 ''')
 
-image = Image.open('pht.png')
+image = Image.open('profil.png')
 st.image(image, width=200)
 
 st.markdown('## Summary', unsafe_allow_html=True)
